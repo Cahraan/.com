@@ -1,0 +1,18 @@
+.Banner {
+text-align: center;
+font-style: italic;
+font-weight: bolder;
+color:blue ;
+}
+body{
+
+    background-image: url(https://wanderon-images.gumlet.io/blogs/new/2024/04/best-time-to-visit-aharbal-waterfalls.jpg)
+
+}
+#d{
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: azure;
+}

@@ -7,7 +7,7 @@ color:blue ;
 body{
 
     background-image: url(https://wanderon-images.gumlet.io/blogs/new/2024/04/best-time-to-visit-aharbal-waterfalls.jpg)
-
+background-repeat="no repeat"
 }
 #d{
     position: absolute;

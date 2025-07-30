@@ -1,28 +1,103 @@
-body {
-  background-image: url('https://wanderon-images.gumlet.io/blogs/new/2024/04/best-time-to-visit-aharbal-waterfalls.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+/* Basic Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* ✅ Mobile screen adjustment */
+/* Banner */
+.banner {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Body Background */
+body {
+  background-image: url('https://wanderon-images.gumlet.io/blogs/new/2024/04/best-time-to-visit-aharbal-waterfalls.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  list-style: none;
+  padding: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: yellow;
+}
+
+/* Main Section */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.dev-info {
+  text-align: center;
+  font-size: 1.1rem;
+  color: azure;
+  margin-bottom: 20px;
+}
+
+.note {
+  color: bisque;
+  margin-bottom: 10px;
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive for Mobile */
 @media screen and (max-width: 768px) {
+  .banner {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .dev-info {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
   body {
-    background-size: contain; /* use contain if image gets cut off */
-    background-attachment: scroll; /* fixed can cause issues on some phones */
-    background-position: top;
-  }
-
-  .Banner {
-    font-size: 20px; /* Adjust banner text for mobile */
-  }
-
-  #d {
-    top: 20px;
-    right: 15px;
-    font-size: 14px;
+    background-size: contain;
+    background-attachment: scroll;
   }
 }
+

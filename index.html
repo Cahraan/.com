@@ -1,5 +1,157 @@
 <!DOCTYPE html>
+<html<!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shworld</title>
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <div class="menu-icon">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<div class="nav-links" id="nav-links">
+  <a href="abdev.html">About developer</a>
+  <a href="#">Services</a>
+  <a href="contact.html">Contact us</a>
+</div>
+
+  <div id="banner">
+
+    <h2> Tuhund Khearmukhdam</h2>
+    
+    </div>
+    <div class="wikipedia-section">
+  <input type="text" id="searchBox" placeholder="🔍 Search Scientist...">
+  <div id="result" class="wiki-card">
+    <h2>Search a Scientist</h2>
+    <p>Type a scientist's name above to view their innovation.</p>
+  </div>
+</div>
+
+
+    <script>
+  const menuIcon = document.querySelector('.menu-icon');
+  const navLinks = document.getElementById('nav-links');
+
+  menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+window.onload = function () {
+  const popup = document.getElementById("popup");
+  popup.classList.add("show");
+
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 5000); // 2 seconds
+};
+
+const data = {
+  "einstein": {
+    name: "Albert Einstein",
+    innovation: "Theory of Relativity",
+    info: "Developed special & general relativity, revolutionizing modern physics."
+  },
+"groot": {
+    name: "Groot",
+    innovation: "Satellite crash alert",
+    info: "Developed special & crash protection for satellites , revolutionizing modern physics,in the year 2022"
+  },
+
+
+  "newton": {
+    name: "Isaac Newton",
+    innovation: "Laws of Motion & Gravity",
+    info: "Formulated the three laws of motion and universal gravitation."
+  },
+  "curie": {
+    name: "Marie Curie",
+    innovation: "Radioactivity",
+    info: "Discovered polonium and radium; first woman to win a Nobel Prize."
+  },
+  "tesla": {
+    name: "Nikola Tesla",
+    innovation: "Alternating Current (AC)",
+    info: "Pioneered AC electricity, wireless communication, and more."
+  },
+  "galileo": {
+    name: "Galileo Galilei",
+    innovation: "Modern Astronomy",
+    info: "Improved the telescope, supported heliocentrism, and advanced physics."
+  }
+};
+
+document.getElementById("searchBox").addEventListener("input", function () {
+  const input = this.value.toLowerCase().trim();
+  const resultDiv = document.getElementById("result");
+  let found = false;
+
+  for (const key in data) {
+    if (key.includes(input)) {
+      const s = data[key];
+      resultDiv.innerHTML = `
+        <h2>${s.name}</h2>
+        <h4>Innovation: ${s.innovation}</h4>
+        <p>${s.info}</p>
+      `;
+      found = true;
+      break;
+    }
+  }
+
+  if (!found && input !== "") {
+    resultDiv.innerHTML = `<h3>No result for "<em>${input}</em>"</h3><p>Try Einstein, Newton, Tesla, Groot etc.</p>`;
+  }
+
+  if (input === "") {
+    resultDiv.innerHTML = `
+      <h2>Search a Scientist</h2>
+      <p>Type a scientist's name above to view their innovation.</p>
+    `;
+  }
+});
+
+
+</script>
+<h3 style="text-align: center;">Upload Your Work</h3>
+<form id="uploadForm" style="text-align: center;">
+  <input type="text" id="name" placeholder="Scientist Name" required />
+  <input type="text" id="innovation" placeholder="Innovation" required />
+  <button type="submit">Upload</button>
+</form>
+<div id="uploadMessage"></div>
+<script>
+  const uploadForm = document.getElementById('uploadForm');
+  const uploadMsg = document.getElementById('uploadMessage');
+
+  uploadForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const innovation = document.getElementById('innovation').value.trim();
+
+    if (name && innovation) {
+      await db.collection('scientists').add({ name, innovation });
+      uploadMsg.textContent = "✅ Uploaded successfully!";
+      uploadForm.reset();
+      loadDynamicData(); // Refresh search list
+    }
+  });
+</script>
+
+
+<div id="popup" class="popup">Note : Ye website che PC screenresolution kheatreh,
+      agar mobile screenas peth cho visit krn,
+      use desktop mode and rotate screen .!</div>
+
+
+</body>
+</html>
+ lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />

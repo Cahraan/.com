@@ -1,18 +1,18 @@
 /* ---------- Global ---------- */
 * {
   box-sizing: border-box;
-  font-family: 'Segoe UI', Georgia, 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Georgia, 'Times New Roman', Times, serif;
   color: #f0f0f0;
 }
 
 body {
   background: linear-gradient(135deg, #1a1a1a 0%, #2c2c34 100%);
-  min-height: 100vh;
   background-attachment: fixed;
   background-size: cover;
-  padding: 20px;
+  min-height: 100vh;
+  padding: 0 20px;
 }
 
 /* ---------- Navigation ---------- */
@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .menu-icon span {
@@ -37,13 +38,14 @@ body {
   position: absolute;
   top: 60px;
   right: 20px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0,0,0,0.8);
   padding: 12px 20px;
   border-radius: 10px;
   display: none;
   flex-direction: column;
   gap: 12px;
   backdrop-filter: blur(8px);
+  z-index: 999;
 }
 
 .nav-links a {
@@ -53,13 +55,8 @@ body {
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #80d4ff;
-}
-
-.nav-links.active {
-  display: flex;
-}
+.nav-links a:hover { color: #80d4ff; }
+.nav-links.active { display: flex; }
 
 /* ---------- Banner ---------- */
 #banner {
@@ -69,52 +66,7 @@ body {
   font-weight: 600;
 }
 
-/* ---------- Upload Section ---------- */
-.upload-title {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 1.5rem;
-}
-
-.upload-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 15px 0 30px;
-  gap: 10px;
-}
-
-.upload-form input {
-  width: 80%;
-  max-width: 400px;
-  padding: 10px;
-  border-radius: 6px;
-  border: 2px solid #4db8ff;
-  background-color: #222;
-  color: #fff;
-  outline: none;
-}
-
-.upload-form input:focus {
-  border-color: #80d4ff;
-}
-
-.upload-form button {
-  background-color: #333;
-  color: #eee;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.upload-form button:hover {
-  background-color: #4db8ff;
-  color: #111;
-}
-
-/* ---------- Wiki Cards ---------- */
+/* ---------- Input & Wiki Card ---------- */
 .wikipedia-section {
   margin: 40px auto;
   max-width: 800px;
@@ -153,6 +105,22 @@ body {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
 }
 
+/* ---------- Buttons ---------- */
+button {
+  background-color: #333;
+  color: #eee;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #4db8ff;
+  color: #111;
+}
+
 /* ---------- Popup ---------- */
 .popup {
   position: fixed;
@@ -165,20 +133,15 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s, visibility 0.4s;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
   z-index: 999;
 }
 
-.popup.show {
-  opacity: 1;
-  visibility: visible;
-}
+.popup.show { opacity: 1; visibility: visible; }
 
-/* ---------- Media Queries ---------- */
+/* ---------- Responsive ---------- */
 @media (max-width: 600px) {
-  #banner { font-size: 1.6rem; padding: 60px 15px 30px; }
-  .upload-form input { width: 95%; }
-  .upload-form button { width: 50%; }
+  #banner { font-size: 1.6rem; }
   #searchBox { font-size: 15px; }
+  .wiki-card { padding: 16px; }
 }
-

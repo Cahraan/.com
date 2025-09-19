@@ -56,3 +56,4 @@ uploadForm.addEventListener('submit', (e) => {
     uploadForm.reset();
   }
 });
+

@@ -1,186 +1,50 @@
-*{
-  color: white;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Developer</title>
 
-body{ 
- background-image: url(https://owlcation.com/.image/t_share/MjA2NDkxNTY0NzgyOTIxNDIy/10-most-beautiful-flowers-of-the-world.jpg);
- background-repeat: no-repeat;
- background-size: cover;
-background-position: center;
-height: 100vh;
-margin: 0;
-background-attachment: fixed;
-}
-.menu-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  color: white;
-}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRXDPQSGJ1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZRXDPQSGJ1');
+  </script>
 
-/* .note{
-  background-color: aquamarine;
-color:blue;
-width: fit-content;
+  <link rel="stylesheet" href="style.css"> <!-- shared site-wide CSS -->
+  <link rel="stylesheet" href="about.css">  <!-- optional page-specific overrides -->
+</head>
+<body class="about-body">
 
-} */
+  <div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCldTepFPfpvRjYOMS74PPwgvMwbjGkyA2tg&s"
+         alt="Developer Logo">
+  </div>
 
+  <div class="about-container">
+    <h2>About Developer</h2>
 
+    <p>
+      Hi, I'm <strong>Sehraan Lateef / Sahnuu</strong>, a passionate developer focused on creating clean and
+      responsive websites. I specialize in <strong>HTML, CSS, and JavaScript</strong>. I love turning ideas into
+      real-life projects that solve problems and bring value.
+    </p>
 
+    <blockquote class="quote">“ChaOs MaKeS the MuSe”</blockquote>
 
+    <blockquote class="quote">
+      “Saare aalam par hun main chhaya hua, Mustanad hai mera farmaaya hua”
+    </blockquote>
 
-.menu-icon span {
-  width: 30px;
-  height: 4px;
-  background-color: black;
-  border-radius: 2px;
-}
-.nav-links {
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
-  border-radius: 8px;
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  backdrop-filter: blur(10px);
-}
+    <p class="signature">
+      — <span>W I T H&nbsp; L O V E&nbsp; F R O M&nbsp; S A H N U U U</span>
+    </p>
+  </div>
 
-.nav-links a {
-  color: blue;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-/* Show menu when active */
-.nav-links.active {
-  display: flex;
-}
-
-h2{
-  color:black;
-  margin: 0px 0px 20px 0px;
-}
-
-
-
-
-#banner{
-  margin:auto;
-  color:white;
-  text-align: center;
-  height: 60px;
- padding-top: 60px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-button{
-
-background-color: black;
-color: darkgrey;
-text-align: center;
-}
-
-.d{
-white-space: normal;
-word-wrap: break-word;
-  margin-right: 20px;
-  width: 100%;
-}
-
-.popup {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #222;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-  z-index: 999;
-}
-
-.popup.show {
-  opacity: 1;
-  visibility: visible;
-}
-.wikipedia-section {
-  margin: 40px auto;
-  max-width: 800px;
-  padding: 20px;
-  animation: fadeInUp 0.8s ease-in-out;
-}
-
-#searchBox {
-  width: 100%;
-  padding: 12px 16px;
-  font-size: 16px;
-  border: 2px solid #007BFF;
-  border-radius: 8px;
-  outline: none;
-  transition: 0.3s;
-  margin-bottom: 20px;
-  background-color: beige;
-}
-
-#searchBox:focus {
-  border-color: #0056b3;
-  box-shadow: 0 0 10px rgba(0,123,255,0.3);
-}
-
-.wiki-card {
-  background-color: grey;
-  border: 2px solid #007BFF;
-  border-left: 8px solid #007BFF;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeIn 9s ease;
-}
-
-.wiki-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-@keyframes fadeInUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@media (max-width: 600px) {
-  .wiki-card {
-    padding: 16px;
-  }
-
-  #searchBox {
-    font-size: 15px;
-  }
-}
+</body>
+</html>
 
 

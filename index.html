@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project 66</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+  </script>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <div class="menu-icon">
+  <!-- Hamburger Menu -->
+  <div class="menu-icon" id="menu-icon">
     <span></span><span></span><span></span>
   </div>
+
   <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
     <a href="abdev.html">About Developer</a>
     <a href="#">Services</a>
     <a href="contact.html">Contact Us</a>
@@ -33,20 +39,20 @@
   </div>
 
   <!-- Upload Section -->
-  <h3 class="upload-title">Upload Your Work</h3>
-  <form id="uploadForm" class="upload-form">
+  <h3 style="text-align:center;">Upload Your Work</h3>
+  <form id="uploadForm" style="text-align:center;">
     <input type="text" id="name" placeholder="Scientist Name" required>
     <input type="text" id="innovation" placeholder="Innovation" required>
     <button type="submit">Upload</button>
   </form>
-  <div id="uploadMessage"></div>
+  <div id="uploadMessage" style="text-align:center; margin-top:10px;"></div>
 
   <!-- Popup -->
   <div id="popup" class="popup">
     Note: This website works best on PC. For mobile, use desktop mode and rotate your screen.
   </div>
 
-  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
+

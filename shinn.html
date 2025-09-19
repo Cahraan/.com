@@ -1,14 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Vision</title>
+<style>
+    /* ===== RESET ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: linear-gradient(to bottom, #f0f4f8, #e0e7ff);
+        color: #333;
+        line-height: 1.6;
+    }
+
+    header {
+        width: 100%;
+        background: #4f46e5;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+    }
+
+    nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: #facc15;
+    }
+
+    section {
+        padding: 100px 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    section h2 {
+        color: #4f46e5;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        text-align: center;
+        position: relative;
+    }
+
+    section h2::after {
+        content: '';
+        width: 60px;
+        height: 4px;
+        background: #facc15;
+        display: block;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+
+    section p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .highlight {
+        color: #4f46e5;
+        font-weight: bold;
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+        background: #4f46e5;
+        color: #fff;
+        font-size: 0.9rem;
+    }
+
+    /* ===== BUTTON ===== */
+    .btn {
+        display: inline-block;
+        padding: 10px 25px;
+        margin-top: 10px;
+        background: #facc15;
+        color: #4f46e5;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: all 0.3s;
+    }
+
+    .btn:hover {
+        background: #eab308;
+        color: #fff;
+    }
+
+    /* ===== MEDIA QUERIES ===== */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2rem;
+        }
+        section h2 {
+            font-size: 1.7rem;
+        }
+        nav a {
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+    }
+</style>
 </head>
-  <style="background-color:green;"
 <body>
 
-hii
+<header>
+    <h1>My Vision</h1>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#goals">Goals</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-  
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am a passionate individual who believes in the power of <span class="highlight">vision and purpose</span>. My journey has been fueled by curiosity, persistence, and a desire to make a meaningful impact in the world. I strive to learn continuously and challenge myself to grow beyond limits.</p>
+    <p>My vision is rooted in creating a world where innovation, empathy, and knowledge intersect to uplift lives. I see challenges not as obstacles but as stepping stones to achieve greater clarity and purpose.</p>
+</section>
+
+<section id="goals">
+    <h2>My Goals</h2>
+    <p>1. <span class="highlight">Empower others:</span> I aim to inspire and support those around me to realize their potential and chase their dreams without fear.</p>
+    <p>2. <span class="highlight">Personal growth:</span> Learning is lifelong. I aspire to deepen my skills and broaden my horizons continuously.</p>
+    <p>3. <span class="highlight">Positive impact:</span> Through my actions, I hope to contribute to a society that values sustainability, innovation, and kindness.</p>
+    <a href="#impact" class="btn">Discover Impact</a>
+</section>
+
+<section id="impact">
+    <h2>Impact I Want to Create</h2>
+    <p>My vision extends beyond personal success. I want to leave a legacy where every project I touch and every person I guide feels empowered and inspired.</p>
+    <p>Through my work, I aim to build bridges between technology, creativity, and social responsibility. By blending these elements, I hope to solve real-world problems and make life simpler, smarter, and more meaningful for others.</p>
+    <p>Ultimately, I believe that true fulfillment comes from <span class="highlight">contributing to the greater good</span>, nurturing curiosity, and encouraging others to dream bigger.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you share a similar vision or want to collaborate on projects that make a difference, I’d love to hear from you! Let’s connect and create something extraordinary together.</p>
+    <a href="mailto:yourmail@example.com" class="btn">Email Me</a>
+</section>
+
+<footer>
+    &copy; 2025 My Vision. All rights reserved.
+</footer>
+
 </body>
+</html>

@@ -1,117 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Developer</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #2c3e50, #4ca1af);
-      color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .container {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 40px 30px;
-      border-radius: 20px;
-      max-width: 600px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    }
-
-    .logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: #4db8ff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 60px;
-      font-weight: bold;
-      margin: 0 auto 20px;
-      font-family: 'Playfair Display', serif;
-      color: white;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 25px;
-      color: #ffd700;
-    }
-
-    p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    a {
-      color: #4db8ff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-info {
-      background: rgba(255,255,255,0.1);
-      padding: 20px;
-      border-radius: 15px;
-      margin-bottom: 20px;
-    }
-
-    .contact-info button {
-      margin-top: 10px;
-      padding: 8px 15px;
-      border: none;
-      border-radius: 8px;
-      background-color: #ffd700;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .contact-info button:hover {
-      background-color: #e6c200;
-    }
-
-    .guidelines {
-      font-size: 0.95rem;
-      color: #dcdcdc;
-      background: rgba(255,255,255,0.05);
-      padding: 15px;
-      border-radius: 12px;
-      text-align: left;
-    }
-
-    .guidelines li {
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 600px) {
-      .container { padding: 25px 20px; }
-      h2 { font-size: 1.6rem; }
-      .logo { width: 100px; height: 100px; font-size: 50px; }
-    }
-  </style>
+  <link rel="stylesheet" href="contact.css">
 </head>
 <body>
+
+  <!-- Hamburger Menu -->
+  <div class="menu-icon" id="menu-icon">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="abdev.html">About Developer</a>
+    <a href="#">Services</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
 
   <div class="container">
     <div class="logo">S</div>
@@ -125,7 +32,7 @@
     </div>
 
     <div class="guidelines">
-      <h3 style="color:#ffd700;">Professional Guidelines for Contacting</h3>
+      <h3>Professional Guidelines for Contacting</h3>
       <ul>
         <li>Be polite and respectful in your message.</li>
         <li>Clearly state the purpose of your communication.</li>
@@ -136,6 +43,7 @@
     </div>
   </div>
 
+  <script src="contact.js"></script>
 </body>
 </html>
 
